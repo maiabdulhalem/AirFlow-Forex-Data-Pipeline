@@ -20,7 +20,7 @@ default_args = {
             "depends_on_past": False,
             "email_on_failure": False,
             "email_on_retry": False,
-            "email": "youremail@host.com",
+            "email": "maiabdulhalem@gmail.com",
             "retries": 1,
             "retry_delay": timedelta(minutes=5)
         }
@@ -113,7 +113,7 @@ with DAG(dag_id="forex_data_pipeline_final", schedule_interval="@daily", default
   
     sending_email_notification = EmailOperator(
             task_id="sending_email",
-            to="",
+            to="maiabdulhalem@gmail.com",
             subject="forex_data_pipeline",
             html_content="""
                 <h3>forex_data_pipeline succeeded</h3>
