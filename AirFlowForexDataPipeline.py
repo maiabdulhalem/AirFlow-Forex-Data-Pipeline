@@ -20,7 +20,7 @@ default_args = {
             "depends_on_past": False,
             "email_on_failure": False,
             "email_on_retry": False,
-            "email": "maiabdulhalem@gmail.com",
+            "email": "admin@localhost.com",
             "retries": 1,
             "retry_delay": timedelta(minutes=5)
         }
@@ -123,7 +123,7 @@ with DAG(dag_id="forex_data_pipeline_final", schedule_interval="@daily", default
  
     sending_slack_notification = SlackAPIPostOperator(
         task_id="sending_slack",
-        token="",
+        token="T021J04H7U4/B021J0DDHS8/QZfbFbTTV8O39fnf2o6R7Rbr",
         username="airflow",
         text="DAG forex_data_pipeline: DONE",
         channel="#airflow-exploit"
